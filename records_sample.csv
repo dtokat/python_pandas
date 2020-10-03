@@ -1,0 +1,7 @@
+Region,Country,Item Type,Sales Channel,Order Priority,Order Date,Order ID,Ship Date,Units Sold,Unit Price,Unit Cost,Total Revenue,Total Cost,Total Profit
+Sub-Saharan Africa,Namibia,Household,Offline,M,8/31/2015,897751939,10/12/2015,3604,668.27,502.54,2408445.08,1811154.16,597290.92
+Europe,Iceland,Baby Food,Online,H,11/20/2010,599480426,1/9/2011,8435,255.28,159.42,2153286.8,1344707.7,808579.1
+Europe,Russia,Meat,Online,L,6/22/2017,538911855,6/25/2017,4848,421.89,364.69,2045322.72,1768017.12,277305.6
+Asia,Vietnam,Personal Care,Offline,L,11/11/2016,322932231,12/18/2016,1678,81.73,56.67,137142.94,95092.26,42050.68
+Sub-Saharan Africa,Sierra Leone,Clothes,Online,M,8/28/2010,492142713,9/21/2010,4820,109.28,35.84,526729.6,172748.8,353980.8
+Sub-Saharan Africa,Eritrea,Vegetables,Offline,L,6/5/2014,943440902,6/30/2014,3983,154.06,90.93,613620.98,362174.19,251446.79
