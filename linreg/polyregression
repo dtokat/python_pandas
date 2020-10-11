@@ -1,0 +1,44 @@
+# About this file
+# Food servers’ tips in restaurants may be influenced by many
+# factors, including the nature of the restaurant, size of the party, and table
+# locations in the restaurant. Restaurant managers need to know which factors
+# matter when they assign tables to food servers. For the sake of staff morale,
+# they usually want to avoid either the substance or the appearance of unfair
+# treatment of the servers, for whom tips (at least in restaurants in the United
+# States) are a major component of pay.
+# In one restaurant, a food server recorded the following data on all cus-
+# tomers they served during an interval of two and a half months in early 1990.
+# The restaurant, located in a suburban shopping mall, was part of a national
+# chain and served a varied menu. In observance of local law, the restaurant
+# offered to seat in a non-smoking section to patrons who requested it. Each
+# record includes a day and time, and taken together, they show the server’s
+# work schedule.
+
+
+import numpy as np
+import pandas as pd
+from scipy import stats
+import matplotlib.pyplot as plt
+from sklearn.metrics import r2_score
+import statsmodels.api as sm
+import seaborn as sns
+sns.set()
+
+df = pd.read_csv('tips.csv')
+print(df.head(4))  #To see first 4 rows
+
+y = df['tip']
+x= df['total_bill']
+mymodel = np.poly1d(np.polyfit(x, y, 3))
+
+myline = np.linspace(1, 22, 100)
+print("tip prediction for $12 bill")
+tip = mymodel(12)
+print(tip)
+print("r_squared value")
+print(r2_score(y, mymodel(x)))
+#r_squared = 0.4728   //The r-squared value ranges from 0 to 1, where 0 means no relationship, and 1 means 100% related.
+
+plt.scatter(x, y)
+plt.plot(myline, mymodel(myline))
+plt.show()
